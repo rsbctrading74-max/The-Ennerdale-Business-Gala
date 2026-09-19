@@ -1,0 +1,8 @@
+{
+  "name": "The Ennerdale Business Gala",
+  "description": "Official ticketing, real-time availability dashboard (400 max capacity, starting from R50 for Youth Ages 15-25 to R100 General Delegate), Capitec Business Bank QR payments, and downloadable digital door tickets for The Ennerdale Business Gala by Future Coding Core and RSBC Trading on 31 October at Grace Assembly Church.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
