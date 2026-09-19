@@ -237,8 +237,8 @@ Reference: ${attendee.paymentReference}`;
       // 8. Footer anti-counterfeit
       ctx.fillStyle = '#6b7280';
       ctx.font = '10px monospace';
-      ctx.fillText(`ISSUED BY FUTURE CODING CORE & RSBC TRADING • SERIAL: ${attendee.id}-${Date.now().toString(36).toUpperCase()}`, width / 2, 1025);
-      ctx.fillText('DOOR ADMITTANCE STRICTLY SUBJECT TO PASS VERIFICATION', width / 2, 1045);
+      ctx.fillText(`ISSUED BY FUTURE CODING CORE & RSBC TRADING • 062 101 3195 • RSBCTRADING74@GMAIL.COM`, width / 2, 1025);
+      ctx.fillText(`SERIAL: ${attendee.id}-${Date.now().toString(36).toUpperCase()} • DOOR ADMITTANCE VERIFIED`, width / 2, 1045);
 
       // Trigger download
       const dataUrl = canvas.toDataURL('image/png');
@@ -445,8 +445,9 @@ Reference: ${attendee.paymentReference}`;
 
             {/* Quick Action Footer in Modal */}
             <div className="mt-4 pt-3 border-t border-neutral-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 print:hidden">
-              <div className="text-[11px] text-neutral-400 text-center sm:text-left">
-                Present this digital pass or downloaded image at the entrance on 31 October.
+              <div className="text-[11px] text-neutral-400 text-center sm:text-left leading-tight">
+                <span>Present pass at entrance on 31 October.</span>
+                <span className="block text-neutral-500">Helpline: 062 101 3195 • rsbctrading74@gmail.com</span>
               </div>
 
               <button

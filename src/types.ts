@@ -46,6 +46,8 @@ export interface BankDetails {
   branchCode: string;
   swiftCode?: string;
   paymentNoticeEmail: string;
+  contactPhone: string;
+  contactWhatsApp?: string;
 }
 
 export interface LocalInsightItem {

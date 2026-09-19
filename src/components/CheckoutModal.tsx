@@ -462,8 +462,23 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                 </button>
               </div>
 
-              <div className="text-center text-[11px] text-neutral-400">
-                Payment verified by RSBC Trading & Capitec Business Merchant integration.
+              <div className="rounded-lg border border-neutral-800 bg-neutral-950/80 p-3 text-center text-xs text-neutral-300 space-y-1">
+                <div className="text-neutral-400 text-[11px]">
+                  Need payment assistance or sending Proof of Payment (POP)?
+                </div>
+                <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs">
+                  <a href={`mailto:${BANK_DETAILS.paymentNoticeEmail}`} className="text-amber-400 hover:underline">
+                    {BANK_DETAILS.paymentNoticeEmail}
+                  </a>
+                  <span className="text-neutral-600 hidden sm:inline">•</span>
+                  <a href={`tel:${BANK_DETAILS.contactPhone.replace(/\s+/g, '')}`} className="text-neutral-200 hover:text-amber-400 font-mono">
+                    Call: {BANK_DETAILS.contactPhone}
+                  </a>
+                  <span className="text-neutral-600 hidden sm:inline">•</span>
+                  <a href={BANK_DETAILS.contactWhatsApp || 'https://wa.me/27621013195'} target="_blank" rel="noreferrer" className="text-emerald-400 hover:underline">
+                    WhatsApp: 062 101 3195
+                  </a>
+                </div>
               </div>
             </div>
           )}

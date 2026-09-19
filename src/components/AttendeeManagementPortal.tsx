@@ -149,7 +149,7 @@ export const AttendeeManagementPortal: React.FC<AttendeeManagementPortalProps> =
                 </span>
               </h3>
               <p className="text-xs text-neutral-400">
-                The Ennerdale Business Gala • Future Coding Core & RSBC Trading
+                The Ennerdale Business Gala • Future Coding Core & RSBC Trading (062 101 3195)
               </p>
             </div>
           </div>
@@ -371,7 +371,7 @@ export const AttendeeManagementPortal: React.FC<AttendeeManagementPortalProps> =
             Showing {filtered.length} of {attendees.length} registered delegates
           </div>
           <div>
-            Capitec Merchant Integration • RSBC Trading (Acc: 1055553690)
+            Capitec Merchant Integration • RSBC Trading (Acc: 1055553690) • Tel: 062 101 3195 • rsbctrading74@gmail.com
           </div>
         </div>
       </div>

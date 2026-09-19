@@ -1,6 +1,6 @@
 import React from 'react';
 import { BANK_DETAILS } from '../data/initialData';
-import { Calendar, MapPin, Mail, ShieldCheck, Ticket, Building2, Code2, Download } from 'lucide-react';
+import { Calendar, MapPin, Mail, Phone, MessageSquare, Ticket, Download } from 'lucide-react';
 
 interface FooterProps {
   onOpenFindTicket: () => void;
@@ -114,20 +114,40 @@ export const Footer: React.FC<FooterProps> = ({
             <div className="font-bold text-neutral-100 uppercase tracking-wider text-xs">
               Contact & Inquiries
             </div>
-            <div className="space-y-2 text-neutral-300">
+            <div className="space-y-2.5 text-neutral-300">
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-amber-400 shrink-0" />
+                <a
+                  href={`tel:${BANK_DETAILS.contactPhone.replace(/\s+/g, '')}`}
+                  className="hover:text-amber-400 transition font-mono font-medium"
+                >
+                  {BANK_DETAILS.contactPhone}
+                </a>
+              </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-amber-400 shrink-0" />
                 <a
                   href={`mailto:${BANK_DETAILS.paymentNoticeEmail}`}
-                  className="hover:text-amber-400 transition underline underline-offset-2"
+                  className="hover:text-amber-400 transition underline underline-offset-2 break-all"
                 >
                   {BANK_DETAILS.paymentNoticeEmail}
                 </a>
               </div>
-              <div className="flex items-start gap-2">
+              <div className="flex items-center gap-2">
+                <MessageSquare className="h-4 w-4 text-emerald-400 shrink-0" />
+                <a
+                  href={BANK_DETAILS.contactWhatsApp || `https://wa.me/27621013195`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-emerald-400 hover:text-emerald-300 transition underline underline-offset-2"
+                >
+                  WhatsApp: 062 101 3195
+                </a>
+              </div>
+              <div className="flex items-start gap-2 pt-1 border-t border-neutral-800/80">
                 <MapPin className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
-                <span className="leading-snug">
-                  Grace Assembly Church, 6th Ave & CNR Percy Street, Ennerdale, Johannesburg South
+                <span className="leading-snug text-neutral-400">
+                  Grace Assembly Church, 6th Ave & CNR Percy Street, Ennerdale
                 </span>
               </div>
             </div>

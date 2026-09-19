@@ -1,6 +1,6 @@
 import React from 'react';
-import { GALA_SCHEDULE } from '../data/initialData';
-import { Clock, MapPin, Calendar, Award, Sparkles, Navigation, ShieldCheck } from 'lucide-react';
+import { GALA_SCHEDULE, BANK_DETAILS } from '../data/initialData';
+import { Clock, MapPin, Calendar, Award, Sparkles, Navigation, ShieldCheck, Phone, Mail, MessageSquare } from 'lucide-react';
 
 export const EventSchedule: React.FC = () => {
   return (
@@ -102,6 +102,35 @@ export const EventSchedule: React.FC = () => {
             <div>
               <strong className="text-neutral-100 block mb-0.5">Dress Code:</strong>
               Black Tie / Executive Traditional African Elegance.
+            </div>
+          </div>
+
+          <div className="mt-4 pt-3 border-t border-neutral-800/60 flex flex-wrap items-center justify-between gap-3 text-xs text-neutral-400">
+            <span className="font-semibold text-neutral-300">RSVP & Logistics Helpline:</span>
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href={`tel:${BANK_DETAILS.contactPhone.replace(/\s+/g, '')}`}
+                className="inline-flex items-center gap-1.5 text-amber-400 hover:underline font-mono"
+              >
+                <Phone className="h-3.5 w-3.5" />
+                <span>{BANK_DETAILS.contactPhone}</span>
+              </a>
+              <a
+                href={BANK_DETAILS.contactWhatsApp || 'https://wa.me/27621013195'}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-emerald-400 hover:underline"
+              >
+                <MessageSquare className="h-3.5 w-3.5" />
+                <span>WhatsApp Hotline</span>
+              </a>
+              <a
+                href={`mailto:${BANK_DETAILS.paymentNoticeEmail}`}
+                className="inline-flex items-center gap-1.5 text-neutral-300 hover:text-amber-400 hover:underline"
+              >
+                <Mail className="h-3.5 w-3.5" />
+                <span>{BANK_DETAILS.paymentNoticeEmail}</span>
+              </a>
             </div>
           </div>
         </div>

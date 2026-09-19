@@ -7,6 +7,8 @@ export const BANK_DETAILS: BankDetails = {
   accountType: 'Business Current Account',
   branchCode: '470010',
   paymentNoticeEmail: 'rsbctrading74@gmail.com',
+  contactPhone: '062 101 3195',
+  contactWhatsApp: 'https://wa.me/27621013195',
 };
 
 export const INITIAL_TIERS: TicketTier[] = [
